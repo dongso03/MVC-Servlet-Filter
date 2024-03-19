@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/my")
+@WebServlet("/service/my")
 public class MyServiceServlet extends HttpServlet{
 
 	@Override
@@ -18,8 +18,10 @@ public class MyServiceServlet extends HttpServlet{
 		String auth = (String) session.getAttribute("auth");
 		if(auth == null) {
 			//로그인이 필요함을 알려줄 수 있는 페이지로 리 다이렉트
+			
 		}
 		// 아래는 서비스 제공 문장들..
+		System.out.println("my service 제공");
 	}
 	
 }
